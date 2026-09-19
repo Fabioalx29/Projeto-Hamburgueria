@@ -1,4 +1,4 @@
- DevBurger
+# 🍔 DevBurger
 
 Site responsivo para uma hamburgueria fictícia, com cardápio e carrinho de compras funcional que finaliza o pedido direto no WhatsApp.
 
@@ -28,23 +28,23 @@ O DevBurger é um projeto front-end feito com HTML, CSS e JavaScript puro (sem f
 
 ## Estrutura do projeto
 
-
+```
 Projeto-Hamburgueria/
 ├── index.html      # Estrutura da página
 ├── style.css       # Estilos e responsividade
 ├── script.js       # Lógica do carrinho e do menu mobile
 ├── logo.svg        # Ícone/logo do site (favicon + cabeçalho)
 └── README.md
-
+```
 
 ## Como rodar localmente
 
 Por ser um projeto estático (sem back-end), basta abrir o arquivo diretamente:
 
 1. Clone o repositório
-   
+   ```bash
    git clone https://github.com/fabioalx29/Projeto-Hamburgueria.git
-  
+   ```
 2. Abra a pasta e dê duplo clique em `index.html`, ou use a extensão **Live Server** do VS Code para abrir com recarregamento automático.
 
 ## Personalização
