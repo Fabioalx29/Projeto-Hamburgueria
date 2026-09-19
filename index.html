@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,16 +11,29 @@
 <body>
 
     <header>
-        <a href="#" class="logo">🍔 DevBurger</a>
+        <a href="#" class="logo"> DevBurger</a>
 
-        <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
             <a href="#">Início</a>
             <a href="#cardapio">Cardápio</a>
             <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </nav>
 
-        <a href="#cardapio" class="btn">Peça Agora</a>
+        <div class="header-actions">
+            <a href="#cardapio" class="btn">Peça Agora</a>
+
+            <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrinho">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
     </header>
 
     <section id="home" class="hero-wrapper">
@@ -38,7 +50,7 @@
                 <nav class="hero-buttons">
                     <a href="#cardapio" class="btn">Ver cardápio</a>
 
-                    <a href="https://wa.me/5511999999999" class="btn btn-outline">
+                    <a href="https://wa.me/5538999621449" class="btn btn-outline">
                         📲 WhatsApp
                     </a>
                 </nav>
@@ -73,7 +85,7 @@
 
         <h2>Nosso Cardápio</h2>
 
-        <p>Escolha seu favorito e faça seu pedido pelo WhatsApp</p>
+        <p>Escolha seu favorito e adicione ao carrinho</p>
 
         <ul class="menu-grid">
 
@@ -94,12 +106,9 @@
 
                 <strong>R$ 28,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir um Burger Clássico"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Burger Clássico" data-price="28.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
             <li>
@@ -117,12 +126,9 @@
 
                 <strong>R$ 34,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir um Burger Bacon"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Burger Bacon" data-price="34.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
             <li>
@@ -142,12 +148,9 @@
 
                 <strong>R$ 42,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir um Burger Duplo"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Burger Duplo" data-price="42.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
             <li>
@@ -165,12 +168,9 @@
 
                 <strong>R$ 32,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir um Burger Veggie"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Burger Veggie" data-price="32.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
             <li>
@@ -188,12 +188,9 @@
 
                 <strong>R$ 18,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir uma Batata Frita"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Batata Frita" data-price="18.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
             <li>
@@ -211,12 +208,9 @@
 
                 <strong>R$ 16,90</strong>
 
-                <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir um Milk Shake"
-                    class="btn"
-                >
-                    Pedir
-                </a>
+                <button class="btn add-to-cart" data-name="Milk Shake" data-price="16.90">
+                    Adicionar ao carrinho
+                </button>
             </li>
 
         </ul>
@@ -241,9 +235,9 @@
             </p>
 
             <ul>
-                <li>🥩 <strong>Carne Fresca</strong> - 100% bovina selecionada</li>
-                <li>🚀 <strong>Entrega Rápida</strong> - Máximo 40 minutos</li>
-                <li>💳 <strong>Pagamento Fácil</strong> - PIX, cartão ou dinheiro</li>
+                <li> <strong>Carne Fresca</strong> - 100% bovina selecionada</li>
+                <li><strong>Entrega Rápida</strong> - Máximo 40 minutos</li>
+                <li> <strong>Pagamento Fácil</strong> - PIX, cartão ou dinheiro</li>
             </ul>
 
         </article>
@@ -254,10 +248,10 @@
 
         <h2>Bateu a Fome?</h2>
 
-        <p>Faça seu pedido agora e receba em casa!</p>
+        <p>Monte seu pedido no cardápio e finalize direto pelo carrinho!</p>
 
-        <a href="https://wa.me/5538999621449" class="btn btn-light">
-            📲 Pedir pelo WhatsApp
+        <a href="#cardapio" class="btn btn-light">
+             Ver Cardápio
         </a>
 
     </section>
@@ -265,7 +259,7 @@
     <footer id="contato">
 
         <section>
-            <h3>🍔 Burger House</h3>
+            <h3>Burger House</h3>
             <p>O melhor hambúrguer artesanal da cidade.</p>
         </section>
 
@@ -277,7 +271,7 @@
         <section>
             <h4>Contato</h4>
             <p>
-                📱 (11) 99999-9999
+                📱 (38) 999621449
                 <br>
                 📍 Rua dos Hambúrgueres, 123
             </p>
@@ -289,12 +283,37 @@
         </section>
 
         <div class="copy">
-            <p>© 2025 - DevBurger</p>
+            <p>© 2026 - DevBurger</p>
         </div>
 
     </footer>
 
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <h3>Seu Carrinho</h3>
+            <button class="cart-close" id="cartClose" aria-label="Fechar carrinho">✕</button>
+        </div>
+
+        <ul class="cart-items" id="cartItems"></ul>
+
+        <p class="cart-empty" id="cartEmpty">Seu carrinho está vazio.</p>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">R$ 0,00</strong>
+            </div>
+
+            <button class="btn cart-checkout" id="cartCheckout">
+                📲 Finalizar no WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
-
